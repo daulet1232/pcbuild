@@ -6,7 +6,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "setup": "docker compose up -d && npx prisma generate && npx prisma db push && npx prisma db seed",
+    "postinstall": "npm run setup"
   },
   "dependencies": {
     "@prisma/adapter-pg": "^7.6.0",
