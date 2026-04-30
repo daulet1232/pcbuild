@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import { Geist, Geist_Mono, Public_Sans } from 'next/font/google'
 import './globals.css'
 import { cn } from '@/lib/utils'
+import { Header } from '@/components/header'
 
 const publicSans = Public_Sans({ subsets: ['latin'], variable: '--font-sans' })
 
@@ -38,7 +39,9 @@ export default function RootLayout({
 				'dark',
 			)}
 		>
-			<body className='min-h-full flex flex-col'>{children}</body>
+			<body className='min-h-full flex flex-col'>
+				<Header />
+				{children}</body>
 		</html>
 	)
 }
