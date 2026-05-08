@@ -3,6 +3,7 @@ import { Geist, Geist_Mono, Public_Sans } from 'next/font/google'
 import './globals.css'
 import { cn } from '@/lib/utils'
 import { Header } from '@/components/header'
+import { Toaster } from 'sonner'
 
 const publicSans = Public_Sans({ subsets: ['latin'], variable: '--font-sans' })
 
@@ -41,7 +42,9 @@ export default function RootLayout({
 		>
 			<body className='min-h-full flex flex-col'>
 				<Header />
-				{children}</body>
+				{children}
+				<Toaster position='top-center'/>
+				</body>
 		</html>
 	)
 }

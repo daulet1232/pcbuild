@@ -1,6 +1,6 @@
 'use client'
 
-import { DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
+import { DialogContent, DialogDescription, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { Component } from "@/lib/types";
 import { useEffect, useState } from "react";
 import { ComponentCard } from "./component-card";
@@ -34,6 +34,9 @@ export function AddComponentDialogContent({
             <DialogHeader>
                 <DialogTitle>Добавить компонент - {categoryName}</DialogTitle>
             </DialogHeader>
+            <DialogDescription>
+      Выберите компонент из списка.
+    </DialogDescription>
             <div className="overflow-y-auto flex-1 mx-1 px-1">
                 {
                     components.length > 0 ? (
